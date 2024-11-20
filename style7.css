@@ -1,0 +1,130 @@
+/* Comencem configurant els paràmetres gràfics de la pàgina web*/
+body{
+    background-color: rgb(234, 235, 217);
+    background-image: url("fotos/os_bru.jpg");
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+    background-position: center center;
+    background-attachment: fixed;
+    margin:0;
+    }
+.contenidor_grid{
+  margin: 5% 10%;
+}
+h1{
+    color:black;
+    text-align: center;
+    font-size: 50px;
+    padding:20px;
+    background:linear-gradient(to right, #ff7f5f, #089648);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(255, 243, 223, 0.7);
+}
+div div div {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+img {
+  border-radius: 10px;
+}
+/*Configurem el flexbox de l'índex*/
+#contenidor_index {
+  position:sticky;
+  top:70px;
+  display: flex;
+  flex-direction: column;
+}
+#contenidor_index h2 {
+  background-color:#089648;
+  padding: 10px;
+  border-radius: 10px;
+}
+#contenidor_index h2 a {
+  color: black;
+}
+/*configurem el flexbox de la galeria de fotos*/
+.contenidor_fotos {   
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px; 
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    background-color: green;
+}
+.contenidor_fotos div {
+    padding : 5px;
+    background-color: rgba(240, 255, 255, 0.068);
+    margin:5px;
+    border-radius: 10px;
+}
+/*adaptem a mòbil el flexbox de la galeria de fotos*/
+@media (max-width: 600px) {
+    .contenidor {
+      flex-direction: column;
+      background-color: blue;
+    }
+}
+/*configurem el grid de la pàgina web*/
+.contenidor_grid {
+  display: grid;
+  grid-template-areas: "titol titol titol titol" "index cos cos cos" "peu peu peu peu";
+  gap: 10px;
+}
+.titol_grid {
+  grid-area:titol;
+}
+.index_grid {
+  grid-area:index;
+}
+.cos_grid {
+  grid-area:cos;
+}
+.peu_grid {
+  grid-area:peu;
+}
+/* i adaptem a mòbil el grid de la pàgina web*/
+@media (max-width: 600px) {
+  .contenidor_grid {
+    grid-template-areas: "titol" "index" "cos" "peu";
+  }
+}
+/* configuració de la posició al peu d'imatge*/
+.position {
+  background-color: burlywood;
+  color: rgb(1, 71, 17);
+  text-align: right;
+  position:relative;
+  left:21%;
+  width: 75%;
+  height: 85px;
+}
+.position h3 {
+  position:absolute;
+  top: 10px;
+  right: 25px;
+}
+.position img {
+  position: absolute;
+  top: 10px;
+  left:20px;
+}
+.position p {
+  position:absolute;
+  bottom:10px;
+  right:25px;
+}
+/* configuració del menú fix superior*/
+#fix {
+  background-color: #089648;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  position:fixed;
+  top:0px;
+  z-index: +1;
+}
